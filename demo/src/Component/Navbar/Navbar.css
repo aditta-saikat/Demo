@@ -1,0 +1,120 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(42 41 41 / 90%);
+  padding: 12px 24px; 
+  border-radius: 40px; /* Remove border radius for a cleaner look */
+  max-width: 1320px; /* Limit max width for alignment */
+  margin: 0 auto; /* Center the navbar */
+  position: fixed; /* Fix the navbar at the top */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  right: 0; /* Align to the right */
+  z-index: 1000; /* Ensure it stays above other elements */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.frame10 img {
+  width: 60px;
+  height: 60px;
+}
+
+.frame7 {
+  display: flex;
+  align-items: center;
+  gap: 24px; /* Add spacing between menu items */
+}
+
+.frame9 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 4px;
+  position: relative; /* For positioning */
+}
+
+.menuText {
+  transition: color 0.3s ease; /* Smooth transition for text color */
+  color: #ffffff; /* Default text color */
+}
+
+.menuItem:hover .menuText {
+  color: transparent; /* Hide the text color */
+  background: linear-gradient(180deg, rgb(254, 181, 108) 0%, rgb(211, 37, 255) 100%);
+  -webkit-background-clip: text; /* Clip background to text */
+  background-clip: text; /* Clip background to text */
+}
+
+.menuItem img {
+  transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
+
+.menuItem:hover img {
+  transform: rotate(90deg); /* Rotate the star SVG on hover */
+}
+
+.loginButton,
+.registrationButton {
+  display: flex;
+  align-items: center;
+  padding: 10px 24px; /* Adjust padding for a more consistent look */
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+}
+
+.loginButton {
+  border: 1px solid #4377fe;
+  background-color: transparent;
+  color: #ffffff;
+  box-shadow: #4377FE;
+}
+
+.loginButton:hover {
+  background: linear-gradient(120deg, rgb(254, 181, 108) 0%, rgb(211, 37, 255) 100%);
+  color: #1a1a1a;
+}
+
+.registrationButton {
+  background-color: #4377fe;
+  color: #ffffff;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 8px 30px rgba(0, 165, 255, 0.5);
+}
+
+.registrationButton:hover {
+  background: linear-gradient(120deg, rgb(254, 181, 108) 0%, rgb(211, 37, 255) 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .frame7 {
+    margin-top: 12px;
+    flex-direction: column;
+    gap: 12px; /* Reduce gap on smaller screens */
+  }
+
+  .frame9 {
+    margin-top: 12px;
+  }
+
+  .menuItem {
+    justify-content: center;
+  }
+}
