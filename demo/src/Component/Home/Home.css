@@ -126,6 +126,8 @@
     position: relative;
 
   }
+
+
   
   @keyframes rotate {
     from {
@@ -146,8 +148,28 @@
     height: 80px;
     animation: rotate 10s linear infinite;
   }
+
   
   
+  .vertical-spheres {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1; /* Behind scroll-indicator */
+    width: 300px; /* Adjust size as necessary */
+    height: 300px; /* Adjust size as necessary */
+    animation: rotate-spheres 20s linear infinite; /* Rotating effect */
+}
+
+/* Keyframes for rotating VerticalSpheres */
+@keyframes rotate-spheres {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
   /* Responsive Styles */
   @media (max-width: 1024px) {
     .main-title {

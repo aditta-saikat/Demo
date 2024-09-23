@@ -4,6 +4,7 @@ import fi_10473357 from "../../assets/fi_10473357.svg";
 import fi_142457 from "../../assets/fi_142457.svg";
 import star1 from "../../assets/Star 1.svg";
 import upArrow from "../../assets/guidance-up-arrow.svg";
+import VerticalSpheres from "../VerticalSpheres/VerticalSpheres";
 
 function Home() {
   return (
@@ -13,7 +14,7 @@ function Home() {
           <span>Cloudcamp Presents</span>
         </div>
         <h1 className="main-title">
-          Mastering{"  "}
+          Mastering{" "}
           <span className="[font-family:'Whyte-Bold',Helvetica] font-bold text-[#f0953e] ml-[15px]">
             AWS
           </span>
@@ -40,12 +41,16 @@ function Home() {
           </div>
         </div>
       </div>
+
       <div className="scroll-indicator">
         <span>Scroll down</span>
         <div className="scroll-arrow">
           <img src={upArrow} alt="Up Arrow" />
         </div>
       </div>
+
+      {/* VerticalSpheres should be positioned as a background */}
+      <VerticalSpheres />
     </div>
   );
 }
