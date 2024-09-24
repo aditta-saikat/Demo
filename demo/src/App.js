@@ -2,20 +2,19 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "../src/Component/Navbar/Navbar";
-import Home from "./Component/Home/Home";
+import Hero_section from "./Component/Hero_section/Hero_section";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
-          <Navbar />
-        </header>
-        <main>
+        <Navbar />
+
+        <div className="content-below-navbar">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Hero_section />} />
           </Routes>
-        </main>
+        </div>
       </div>
     </Router>
   );
