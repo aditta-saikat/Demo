@@ -4,15 +4,11 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-// Get the root element
-var rootElement = document.getElementById("root");
-// Check if the root element exists
+const rootElement = document.getElementById("root");
 if (!rootElement) {
     throw new Error('Root element not found');
 }
-// Create the root
-var root = ReactDOM.createRoot(rootElement);
-// Render the application
+const root = ReactDOM.createRoot(rootElement);
 root.render(_jsx(React.StrictMode, { children: _jsx(App, {}) }));
-// Measure performance
 reportWebVitals();
+//# sourceMappingURL=index.js.map

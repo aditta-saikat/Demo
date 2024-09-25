@@ -1,23 +1,25 @@
-import React from "react";
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
-import Navbar from "../src/Component/Navbar/Navbar";
-import Hero_section from "./Component/Hero_section/Hero_section";
-
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <Navbar />
-
-        <div className="content-below-navbar">
-          <Routes>
-            <Route path="/" element={<Hero_section />} />
-          </Routes>
-        </div>
-      </div>
-    </Router>
-  );
-}
-
+import Navbar from "./Component/Navbar/Navbar";
+import Hero_section from "./Component/HeroSection/HeroSection";
+import "./i18n";
+var App = function () {
+  return _jsx(Router, {
+    children: _jsxs("div", {
+      className: "bg-black",
+      children: [
+        _jsx(Navbar, {}),
+        _jsx("div", {
+          className: "mt-10",
+          children: _jsx(Routes, {
+            children: _jsx(Route, {
+              path: "/",
+              element: _jsx(Hero_section, {}),
+            }),
+          }),
+        }),
+      ],
+    }),
+  });
+};
 export default App;

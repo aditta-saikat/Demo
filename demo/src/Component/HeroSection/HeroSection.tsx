@@ -1,15 +1,16 @@
-// Hero_section.js
 import React from "react";
+import { useTranslation } from 'react-i18next';
 import fi_10473357 from "../../assets/fi_10473357.svg";
 import fi_142457 from "../../assets/fi_142457.svg";
 import upArrow from "../../assets/guidance-up-arrow.svg";
 import VerticalSpheres from "./VerticalSpheres";
 import vectorImage from "../../assets/vector.svg";
+import Moon from "./Mode";
 
-function Hero_section() {
+const HeroSection: React.FC = () => {
   return (
     <div
-      className="relative max-w-[1400px] mx-auto flex justify-between items-center p-10 bg-black text-white flex-wrap overflow-hidden"
+      className="relative max-w-[1440px] mx-auto flex justify-between items-center p-10 bg-black text-white flex-wrap overflow-hidden"
       style={{ backgroundImage: `url(${vectorImage})` }}
     >
       <div className="flex flex-col max-w-[850px] z-10">
@@ -47,8 +48,8 @@ function Hero_section() {
       </div>
 
       <div className="flex flex-col items-center text-white font-whyte font-normal text-[24px] z-10">
-        <span className="transform rotate-90">Scroll down</span>
-        <div className="flex items-center mt-28 relative">
+        <span className="transform rotate-90 ">Scroll down</span>
+        <div className="flex items-center mt-20 relative">
           <img
             src={upArrow}
             alt="Up Arrow"
@@ -60,8 +61,11 @@ function Hero_section() {
 
       {/* VerticalSpheres should be positioned as a background */}
       <VerticalSpheres />
-    </div>
-  );
-}
 
-export default Hero_section;
+      <Moon />
+    </div>
+    
+  );
+};
+
+export default HeroSection;

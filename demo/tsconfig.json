@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es6",                          // More modern JavaScript target
+    "module": "esnext",                       // Use ESNext module syntax
+    "strict": true,                           // Enable strict type-checking
+    "jsx": "react-jsx",                       // Supports JSX in React 17+
+    "moduleResolution": "node",               // Resolve modules using Node.js rules
+    "esModuleInterop": true,                  // Allow default imports from CommonJS modules
+    "skipLibCheck": true,                     // Skip checking types in `node_modules`
+    "forceConsistentCasingInFileNames": true, // Enforce consistent casing in imports
+    "outDir": "./dist",                      // Output directory for compiled files
+    "sourceMap": true                         // Enable source maps for debugging
+  },
+  "include": ["src/**/*"],                    // Include all files in the `src` folder
+  "exclude": ["node_modules", "build"]        // Exclude these folders
+}

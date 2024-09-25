@@ -6,11 +6,14 @@ import UK from "../../assets/circle-flags-uk.svg";
 import arrow_down from "../../assets/arrow-down.svg";
 import BN from "../../assets/emojione-flag-for-bangladesh.svg";
 
-function Navbar() {
-  const [hoveredItem, setHoveredItem] = useState(null);
-  const [isLanguageExpanded, setIsLanguageExpanded] = useState(false);
+const Navbar: React.FC = () => {
+  
+  // Correct state definition with types
+  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  const [isLanguageExpanded, setIsLanguageExpanded] = useState<boolean>(false);
 
-  const handleMouseEnter = (item) => {
+  // Event handlers with types
+  const handleMouseEnter = (item: string) => {
     setHoveredItem(item);
   };
 
@@ -27,6 +30,8 @@ function Navbar() {
       <div className="flex items-center">
         <img src={frame4} alt="icon" className="w-15 h-15" />
       </div>
+
+      {/* Navbar Links */}
       <div className="flex items-center gap-6">
         {["Overview", "Modules", "Guidelines"].map((item) => (
           <div
@@ -48,6 +53,8 @@ function Navbar() {
           </div>
         ))}
       </div>
+
+      {/* Language Switching Button */}
 
       <div className="flex items-center gap-4">
         <div>
@@ -81,7 +88,10 @@ function Navbar() {
             </div>
           )}
         </div>
-        <div className="flex items-center px-6 py-2 border border-blue-500 bg-transparent text-white rounded-full  cursor-pointer font-sans font-medium text-base transition-all duration-300 hover:bg-gradient-to-r from-[#feb56c] to-[#d325ff]">
+
+        {/*Login Registration Button */}
+
+        <div className="flex items-center px-6 py-2 border border-blue-500 bg-transparent text-white rounded-full cursor-pointer font-sans font-medium text-base transition-all duration-300 hover:bg-gradient-to-r from-[#feb56c] to-[#d325ff]">
           <span>Login</span>
         </div>
         <div className="flex items-center px-6 py-2 bg-blue-500 text-white rounded-full cursor-pointer font-sans shadow-[0_8px_60px_rgba(0,165,255,0.5)] font-medium text-base transition-all duration-300 hover:bg-gradient-to-r from-[#feb56c] to-[#d325ff]">
@@ -90,6 +100,6 @@ function Navbar() {
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;
