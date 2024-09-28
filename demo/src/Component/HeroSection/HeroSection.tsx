@@ -8,6 +8,7 @@ import vectorImage from "../../assets/vector.svg";
 import Moon from "./Mode";
 import KeyFeatures from "../KeyFeatures/KeyFeatures";
 import Enrollment from "../Enrollment/Enrollment";
+import Modulo from "../Modulo/Modulo";
 
 const HeroSection: React.FC = () => {
   return (
@@ -74,6 +75,8 @@ const HeroSection: React.FC = () => {
       <KeyFeatures />
 
       <Enrollment />
+
+      <Modulo />
       
     </div>
   );

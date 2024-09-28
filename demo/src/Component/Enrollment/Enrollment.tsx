@@ -12,28 +12,27 @@ import Ellipse3 from './Ellipse3';
 
 const Enrollment: React.FC = () => {
   return (
-    <div className="max-w-[1440px] h-screen bg-black flex flex-col items-center justify-center p-8 relative">
+    <div className="max-w-[1440px] min-h-screen bg-black flex flex-col items-center justify-center p-8 relative ml-28">
       <h1 className="text-white text-6xl font-bold mb-16">Book Your Enrollment</h1>
 
       {/* Ellipse Positioned in the Background */}
-      <div className="absolute top-[80%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
+      <div className="absolute top-[47%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
         <Ellipse3 />
       </div>
 
       {/* Timer Section */}
-      <div className="relative w-[350px] h-[350px] flex items-center justify-center">
+      <div className="relative w-[385px] h-[350px] flex items-center justify-center">
         {/* Timer Background SVG */}
         <img
           src={group_3}
           alt="Timer Background"
-          className="absolute inset-0 w-[380px] h-[380px] object-cover"
-          style={{ zIndex: -1 }} // Ensure it is behind the timer text
+          className="absolute  inset-0  z-1 left-[-3%] top-[-10%]"
         />
         {/* Timer Ellipse SVG */}
         <img
           src={ellipse_3}
           alt="Timer Ellipse"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-[100%] h-[135%] left-[0%] top-[-20%] object-cover"
         />
         {/* Timer Text */}
         <div className="absolute flex flex-col items-center justify-center text-white">
@@ -42,7 +41,7 @@ const Enrollment: React.FC = () => {
         </div>
       </div>
 
-      <button className="mt-12 px-10 py-3 bg-[#4377FE] text-white rounded-full text-xl font-semibold shadow-lg hover:bg-[#3366ED] transition-colors">
+      <button className="mt-12 px-10 py-3 z-30 bg-[#4377FE] text-white rounded-full text-xl font-semibold shadow-[0_8px_60px_rgba(0,165,255,0.5)] transition-all duration-300 ease-in-out transform hover:bg-gradient-to-r from-[#feb56c] to-[#d325ff] hover:scale-105">
         Enroll now
       </button>
 
@@ -68,7 +67,7 @@ const Enrollment: React.FC = () => {
             <img src={docker} alt="Docker" className="w-10 h-10" />
           </div>
         </div>
-        <div className="absolute top-[-23rem] right-0 ">
+        <div className="absolute top-[-23rem] right-[0rem] ">
           <div className="w-15 h-15 rounded-full bg-white bg-opacity-10 p-2 flex items-center justify-center">
             <img src={jenkins} alt="Jenkins" className="w-10 h-10" />
           </div>
@@ -81,7 +80,7 @@ const Enrollment: React.FC = () => {
       </div>
 
       {/* Ellipse Positioned in the Background */}
-      <div className="absolute top-[100%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-0">
+      <div className="absolute top-[100%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-1">
         <Ellipse />
       </div>
     </div>
